@@ -21,8 +21,6 @@
 }
 
 body {
-    /*display: flex;
-    justify-content: center;*/
     margin: 0;
     padding: 0;
 }
@@ -63,7 +61,8 @@ h2 {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    width: 100%;
+    /*width: 100%;*/
+    height: 145px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
@@ -122,14 +121,13 @@ h2 {
 
 .main--header--navigation--links_container {
     right: 0;
-    padding: 0 50px;
     margin-left: auto;
     display: flex;
     top: 0;
 }
 
 .main--header--navigation--links_container--link {
-    margin: 0 25px;
+    margin: 0 0 0 60px;
 	display: inline-block;
 	position: relative;
 	color: var(--black-color);
@@ -325,6 +323,16 @@ h2 {
 
 
 /****** Hebergements And Populaires ***********/
+
+.button-show-more {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: block;
+}
+
 .main--lodging_and_popular {
     display: flex;
     justify-content: space-between;
@@ -399,10 +407,6 @@ h2 {
     width: 32%;
 }
 
-/*.main--lodging_and_popular--section--wrapper_2--link_card_pop {
-    display: flex;
-}*/
-
 .main--lodging_and_popular--section--wrapper_2--title {
     display: flex;
     justify-content: space-between;
@@ -416,7 +420,7 @@ h2 {
 
 .main--lodging_and_popular--section--wrapper_2--link_card_pop--card img {
     width: 33%;
-    height: 136px;
+    height: 100%;
     border-radius: 20px 0 0 20px;
     object-fit: cover;
 }
@@ -560,10 +564,34 @@ h2 {
     .main--lodging_and_popular--section--wrapper--link_card_pop--card--card_content--titles .card-subtitle {
         font-size: 13px;
     }
+
+    .main--lodging_and_popular--section--wrapper_2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0px;
+        gap: 30px;
+    }
+    .main--lodging_and_popular--section--wrapper_2--link_card_pop {
+        width: 33%;
+        
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+    .main--lodging_and_popular--section--wrapper_2 {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 40px;
+    }
+    .main--lodging_and_popular--section--wrapper_2--link_card_pop {
+        width: 100%;
+        height: 145px;
+        margin: 20px 0;
+    }
 
     .main--header--search_container--filters_container--items_container {
         gap: 10px 10px;
@@ -657,7 +685,7 @@ h2 {
     .main--header--navigation--links_container {
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 0;
         width: 100%;
     }
